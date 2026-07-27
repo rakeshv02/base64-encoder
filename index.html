@@ -1,36 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>URL Encoder & Decoder — Free Online Tool | Tabutility</title>
-    <meta name="description" content="Free URL encoder and decoder. Encode and decode URLs instantly. Convert special characters to URL-safe format for APIs, query strings, and web development. No sign-up." />
-    <meta name="keywords" content="url encoder, url decoder, encode url, decode url, url encoding, percent encoding, url converter online" />
-    <link rel="canonical" href="https://url-encoder.tabutility.com/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://url-encoder.tabutility.com/" />
-    <meta property="og:title" content="URL Encoder & Decoder — Free Online Tool" />
-    <meta property="og:description" content="Encode and decode URLs instantly. Free, no sign-up." />
-    <meta property="og:site_name" content="Tabutility" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="URL Encoder & Decoder — Free Online Tool" />
-    <meta name="twitter:description" content="Encode and decode URLs instantly. Free, no sign-up." />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔗</text></svg>" />
-    <meta name="robots" content="index, follow" />
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-78VZWJ5B1W');
-    </script>
-    <script type="application/ld+json">
-    { "@context": "https://schema.org", "@type": "WebApplication", "name": "URL Encoder", "url": "https://url-encoder.tabutility.com", "description": "Free online URL encoder and decoder. Convert special characters to URL-safe format instantly.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, "provider": { "@type": "Organization", "name": "Tabutility", "url": "https://tabutility.com" } }
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Base64 Encoder / Decoder — Tabutility</title>
+<meta name="description" content="Free Base64 encoder and decoder. Encode text or files to Base64 and decode Base64 strings instantly in your browser."/>
+<meta name="keywords" content="base64 encoder, base64 decoder, encode base64, decode base64, base64 converter online"/>
+<link rel="canonical" href="https://base64-encoder.tabutility.com/"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔄</text></svg>"/>
+<meta property="og:title" content="Base64 Encoder / Decoder"/>
+<meta property="og:description" content="Free Base64 encoder and decoder. Encode text or files to Base64 and decode instantly."/>
+<meta property="og:url" content="https://base64-encoder.tabutility.com/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Tabutility"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Base64 Encoder / Decoder"/>
+<meta name="twitter:description" content="Free Base64 encoder and decoder. Encode text or files to Base64 and decode instantly."/>
+<meta name="robots" content="index, follow"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-78VZWJ5B1W');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Base64 Encoder / Decoder","url":"https://base64-encoder.tabutility.com/","description":"Free Base64 encoder and decoder. Encode text or files to Base64 and decode Base64 strings instantly in your browser.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tabutility","item":"https://tabutility.com"},{"@type":"ListItem","position":2,"name":"Developer Tools","item":"https://tabutility.com"},{"@type":"ListItem","position":3,"name":"Base64 Encoder / Decoder","item":"https://base64-encoder.tabutility.com/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Base64?","acceptedAnswer":{"@type":"Answer","text":"Base64 is an encoding scheme that converts binary data into ASCII text — commonly used for sending data in HTML, CSS or APIs."}},{"@type":"Question","name":"Is my data sent to a server?","acceptedAnswer":{"@type":"Answer","text":"No — all encoding/decoding happens in your browser using JavaScript's btoa/atob."}},{"@type":"Question","name":"Is the Base64 Encoder free?","acceptedAnswer":{"@type":"Answer","text":"Yes — completely free, no sign-up needed."}},{"@type":"Question","name":"Can I encode files?","acceptedAnswer":{"@type":"Answer","text":"Yes — use the file mode to convert any file to base64."}}]}</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0f172a;color:#f1f5f9;min-height:100vh}
+nav{background:#1e293b;border-bottom:1px solid #334155;padding:14px 24px;display:flex;align-items:center;gap:16px}
+nav a{color:#94a3b8;text-decoration:none;font-size:14px}nav a:hover{color:#f1f5f9}
+nav .brand{color:#38bdf8;font-weight:700;font-size:18px}
+.ad-banner{background:#1e293b;border-bottom:1px solid #334155;padding:4px;text-align:center}
+#app{max-width:780px;margin:8px auto;padding:0 16px 40px}
+h1{font-size:clamp(20px,4vw,28px);font-weight:800;margin:24px 0 6px;color:#f1f5f9}
+.subtitle{color:#94a3b8;font-size:14px;margin-bottom:20px}
+.tabs{display:flex;gap:2px;background:#0f172a;border-radius:10px;padding:4px;margin-bottom:20px;border:1px solid #334155}
+.tab{flex:1;text-align:center;padding:10px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;color:#94a3b8;border:none;background:none;transition:all .2s}
+.tab.active{background:#38bdf8;color:#0f172a}
+.card{background:#1e293b;border:1px solid #334155;border-radius:14px;padding:24px;margin-bottom:20px}
+.pane-label{font-size:12px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+textarea{width:100%;height:160px;background:#0f172a;border:1px solid #334155;border-radius:10px;color:#f1f5f9;font-family:monospace;font-size:13px;padding:14px;resize:vertical;outline:none;line-height:1.5;margin-bottom:10px}
+textarea:focus{border-color:#38bdf8}
+.output-box{width:100%;min-height:100px;background:#0f172a;border:1px solid #334155;border-radius:10px;font-family:monospace;font-size:13px;padding:14px;overflow-x:auto;line-height:1.5;word-break:break-all;color:#38bdf8;margin-bottom:12px}
+.btn{display:inline-flex;align-items:center;gap:6px;background:#38bdf8;color:#0f172a;border:none;border-radius:8px;padding:9px 18px;font-size:13px;font-weight:700;cursor:pointer;transition:background .2s}
+.btn:hover{background:#7dd3fc}
+.btn-outline{background:transparent;border:1px solid #334155;color:#f1f5f9}
+.btn-outline:hover{background:#334155}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.urlsafe-row{display:flex;align-items:center;gap:8px;margin-bottom:14px;font-size:13px;color:#94a3b8}
+.urlsafe-row input{width:16px;height:16px;accent-color:#38bdf8;cursor:pointer}
+.drop-zone{border:2px dashed #334155;border-radius:10px;padding:32px;text-align:center;color:#64748b;cursor:pointer;transition:border-color .2s;margin-bottom:14px}
+.drop-zone:hover,.drop-zone.drag{border-color:#38bdf8;color:#94a3b8}
+.drop-zone input[type=file]{display:none}
+.file-info{background:#0f172a;border:1px solid #334155;border-radius:8px;padding:10px 14px;font-size:13px;color:#94a3b8;margin-bottom:12px;display:none}
+.divider{display:flex;align-items:center;text-align:center;color:#475569;font-size:12px;margin:14px 0}
+.divider::before,.divider::after{content:'';flex:1;border-bottom:1px solid #334155}
+.divider::before{margin-right:10px}.divider::after{margin-left:10px}
+.sub-tabs{display:flex;gap:6px;margin-bottom:16px}
+.sub-tab{background:#0f172a;border:1px solid #334155;border-radius:8px;color:#94a3b8;padding:6px 14px;font-size:13px;cursor:pointer;transition:all .2s}
+.sub-tab.active{background:#334155;color:#f1f5f9;border-color:#475569}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#22c55e;color:#fff;padding:10px 22px;border-radius:8px;font-size:14px;font-weight:600;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+.toast.show{opacity:1}
+.error{color:#f87171;font-size:13px;margin-bottom:8px;display:none}
+</style>
+</head>
+<body>
+<nav><span class="brand">⚡ Tabutility</span><a href="https://tabutility.com">← All Tools</a></nav>
+<div class="ad-banner"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+<div id="app">
+  <h1>🔄 Base64 Encoder / Decoder</h1>
+  <p class="subtitle">Encode text or files to Base64 and decode Base64 strings instantly — all in your browser.</p>
+
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('encode',this)">Encode</button>
+    <button class="tab" onclick="switchTab('decode',this)">Decode</button>
+  </div>
+
+  <div class="card" id="encodeCard">
+    <div class="sub-tabs">
+      <button class="sub-tab active" onclick="setInputMode('text',this)">Text</button>
+      <button class="sub-tab" onclick="setInputMode('file',this)">File</button>
+    </div>
+
+    <div id="textInput">
+      <div class="urlsafe-row"><input type="checkbox" id="urlSafe" onchange="encodeText()"/> URL-safe Base64 (replace + and / with - and _)</div>
+      <div class="pane-label">Input Text</div>
+      <textarea id="encInput" placeholder="Type or paste text to encode..." oninput="encodeText()"></textarea>
+    </div>
+
+    <div id="fileInput" style="display:none">
+      <div class="drop-zone" id="dropZone" onclick="document.getElementById('fileSelect').click()" ondragover="ev.preventDefault();this.classList.add('drag')" ondragleave="this.classList.remove('drag')" ondrop="handleDrop(event)">
+        <div style="font-size:32px;margin-bottom:8px">📁</div>
+        <div style="font-size:14px;font-weight:600;margin-bottom:4px">Click or drag a file here</div>
+        <div style="font-size:12px">Any file type supported</div>
+        <input type="file" id="fileSelect" onchange="handleFile(this.files[0])"/>
+      </div>
+      <div class="file-info" id="fileInfo"></div>
+    </div>
+
+    <div class="divider">Base64 Output</div>
+    <div class="error" id="encError"></div>
+    <div class="output-box" id="encOutput"></div>
+    <div class="btn-row">
+      <button class="btn btn-outline" onclick="copyEnc()">📋 Copy</button>
+      <button class="btn btn-outline" onclick="clearEnc()">✕ Clear</button>
+    </div>
+  </div>
+
+  <div class="card" id="decodeCard" style="display:none">
+    <div class="urlsafe-row"><input type="checkbox" id="urlSafeDec"/> Input is URL-safe Base64</div>
+    <div class="pane-label">Base64 Input</div>
+    <textarea id="decInput" placeholder="Paste Base64 string here..." oninput="decodeText()"></textarea>
+    <div class="divider">Decoded Output</div>
+    <div class="error" id="decError"></div>
+    <div class="output-box" id="decOutput"></div>
+    <div class="btn-row">
+      <button class="btn btn-outline" onclick="copyDec()">📋 Copy</button>
+      <button class="btn btn-outline" onclick="clearDec()">✕ Clear</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">Copied!</div>
+
+<div style="max-width:780px;margin-left:auto;margin-right:auto;margin-top:24px;margin-bottom:8px;padding:0 16px">
+  <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:20px 24px">
+    <h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px">Related Tools</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
+      <a href="https://url-encoder.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">URL Encoder / Decoder</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Developer Tools</div></a>
+      <a href="https://json-formatter.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">JSON Formatter</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Developer Tools</div></a>
+      <a href="https://uuid-generator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">UUID Generator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Developer Tools</div></a>
+      <a href="https://password-generator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Password Generator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Developer Tools</div></a>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:780px;margin-left:auto;margin-right:auto;margin-top:8px;margin-bottom:24px;padding:0 16px">
+  <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:20px 24px">
+    <h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px">Frequently Asked Questions</h2>
+    <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 0">
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">What is Base64?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">Base64 is an encoding scheme that converts binary data into ASCII text — commonly used for sending data in HTML, CSS or APIs.</div>
+    </div>
+    <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 0">
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">Is my data sent to a server?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">No — all encoding/decoding happens in your browser using JavaScript's btoa/atob. Nothing leaves your device.</div>
+    </div>
+    <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 0">
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">Is this free?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">Yes — completely free, no sign-up needed.</div>
+    </div>
+    <div style="padding:14px 0">
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">Can I encode files?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">Yes — use the File tab to convert any file to base64. Great for embedding images in CSS or HTML.</div>
+    </div>
+  </div>
+</div>
+
+<div style="text-align:center;padding:8px">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div>
+
+<script>
+let currentTab='encode';
+let inputMode='text';
+
+function switchTab(t,el){
+  currentTab=t;
+  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('encodeCard').style.display=t==='encode'?'block':'none';
+  document.getElementById('decodeCard').style.display=t==='decode'?'block':'none';
+}
+
+function setInputMode(m,el){
+  inputMode=m;
+  document.querySelectorAll('.sub-tab').forEach(b=>b.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('textInput').style.display=m==='text'?'block':'none';
+  document.getElementById('fileInput').style.display=m==='file'?'block':'none';
+}
+
+function encodeText(){
+  const input=document.getElementById('encInput').value;
+  const urlSafe=document.getElementById('urlSafe').checked;
+  const err=document.getElementById('encError');
+  if(!input){document.getElementById('encOutput').textContent='';err.style.display='none';return;}
+  try{
+    let b64=btoa(unescape(encodeURIComponent(input)));
+    if(urlSafe) b64=b64.replace(/\+/g,'-').replace(/\//g,'_').replace(/=/g,'');
+    document.getElementById('encOutput').textContent=b64;
+    err.style.display='none';
+  }catch(e){
+    err.style.display='block';
+    err.textContent='Error: '+e.message;
+  }
+}
+
+function decodeText(){
+  let input=document.getElementById('decInput').value.trim();
+  const urlSafe=document.getElementById('urlSafeDec').checked;
+  const err=document.getElementById('decError');
+  if(!input){document.getElementById('decOutput').textContent='';err.style.display='none';return;}
+  try{
+    if(urlSafe) input=input.replace(/-/g,'+').replace(/_/g,'/');
+    const pad=input.length%4;
+    if(pad) input+=('====').slice(pad);
+    const decoded=decodeURIComponent(escape(atob(input)));
+    document.getElementById('decOutput').textContent=decoded;
+    err.style.display='none';
+  }catch(e){
+    err.style.display='block';
+    err.textContent='Error: Invalid Base64 input';
+  }
+}
+
+function handleFile(file){
+  if(!file) return;
+  const info=document.getElementById('fileInfo');
+  info.style.display='block';
+  info.textContent='Loading: '+file.name+' ('+formatSize(file.size)+')...';
+  const reader=new FileReader();
+  reader.onload=function(e){
+    let b64=e.target.result.split(',')[1];
+    const urlSafe=document.getElementById('urlSafe').checked;
+    if(urlSafe) b64=b64.replace(/\+/g,'-').replace(/\//g,'_').replace(/=/g,'');
+    document.getElementById('encOutput').textContent=b64;
+    info.textContent='File: '+file.name+' | Size: '+formatSize(file.size)+' | Type: '+(file.type||'unknown');
+  };
+  reader.readAsDataURL(file);
+}
+
+function handleDrop(e){
+  e.preventDefault();
+  document.getElementById('dropZone').classList.remove('drag');
+  const file=e.dataTransfer.files[0];
+  if(file) handleFile(file);
+}
+
+function formatSize(bytes){
+  if(bytes<1024) return bytes+'B';
+  if(bytes<1048576) return (bytes/1024).toFixed(1)+'KB';
+  return (bytes/1048576).toFixed(1)+'MB';
+}
+
+function copyEnc(){
+  const txt=document.getElementById('encOutput').textContent;
+  if(!txt) return;
+  navigator.clipboard.writeText(txt).then(()=>showToast());
+}
+
+function copyDec(){
+  const txt=document.getElementById('decOutput').textContent;
+  if(!txt) return;
+  navigator.clipboard.writeText(txt).then(()=>showToast());
+}
+
+function clearEnc(){
+  document.getElementById('encInput').value='';
+  document.getElementById('encOutput').textContent='';
+  document.getElementById('encError').style.display='none';
+  document.getElementById('fileInfo').style.display='none';
+}
+
+function clearDec(){
+  document.getElementById('decInput').value='';
+  document.getElementById('decOutput').textContent='';
+  document.getElementById('decError').style.display='none';
+}
+
+function showToast(){
+  const t=document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),1800);
+}
+</script>
+</body>
 </html>
