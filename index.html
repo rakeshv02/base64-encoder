@@ -374,6 +374,106 @@ function showToast(){
 <div>Free, private, browser-based tools. No sign-up, no tracking.</div>
 <div style="margin-top:6px"><a href="https://tabutility.com" style="color:#818cf8;font-weight:600;text-decoration:none">All Tools</a> · <a href="https://tabutility.com/blog/" style="color:#94a3b8;text-decoration:none">Blog</a> · <a href="https://tabutility.com/about/" style="color:#94a3b8;text-decoration:none">About</a> · <a href="https://tabutility.com/privacy-policy/" style="color:#94a3b8;text-decoration:none">Privacy</a> · <a href="https://tabutility.com/contact/" style="color:#94a3b8;text-decoration:none">Contact</a></div>
 <div style="margin-top:6px;color:#64748b">© 2026 Tabutility</div>
-</footer>
+
+  <section id="seo-content" style="background:#1a1a2e;color:#e2e8f0;padding:60px 20px;margin-top:40px;border-top:1px solid #2d3748;">
+    <div style="max-width:860px;margin:0 auto;font-family:system-ui,-apple-system,sans-serif;line-height:1.7;">
+      <h2 style="font-size:2rem;font-weight:700;color:#f1f5f9;margin-bottom:24px;">How to Use the Base64 Encoder / Decoder</h2>
+      <p style="margin-bottom:16px;color:#cbd5e1;">The Base64 Encoder/Decoder converts any text or binary data to Base64 format and decodes Base64 strings back to their original form instantly in your browser. It's a fundamental tool for developers working with APIs, data URIs, authentication headers, and encoded content.</p>
+      <p style="margin-bottom:16px;color:#cbd5e1;">Type or paste your text to encode it, or paste a Base64 string to decode it. The tool also supports encoding binary data from file uploads and creating data URIs for small images or icons to embed directly in HTML/CSS.</p>
+      <p style="margin-bottom:16px;color:#cbd5e1;">A critical nuance is that Base64 is an encoding, not encryption — it doesn't hide or secure your data. Anyone can decode a Base64 string. It's used for safe transmission of binary data through text-based systems (email, JSON, URLs) and for embedding binary assets in text formats. Never use Base64 as a security measure.</p>
+
+      <div style="background:#0f172a;border:1px solid #334155;border-radius:12px;padding:28px;margin:32px 0;">
+        <h3 style="font-size:1.2rem;font-weight:600;color:#f1f5f9;margin-bottom:16px;">📊 Worked Example</h3>
+        <p style="color:#94a3b8;margin:0 0 12px;">Encoding and decoding examples:</p>
+        <ul style="list-style:none;padding:0;margin:0;color:#cbd5e1;font-family:monospace;font-size:0.85rem;">
+          <li style="padding:6px 0;border-bottom:1px solid #1e293b;">"Hello, World!" → <strong style="color:#34d399;">SGVsbG8sIFdvcmxkIQ==</strong></li>
+          <li style="padding:6px 0;border-bottom:1px solid #1e293b;">"username:password" → <strong style="color:#34d399;">dXNlcm5hbWU6cGFzc3dvcmQ=</strong></li>
+          <li style="padding:6px 0;border-bottom:1px solid #1e293b;">The = padding at the end indicates byte alignment</li>
+          <li style="padding:6px 0;">Base64 output is ~33% larger than input</li>
+        </ul>
+      </div>
+
+      <h3 style="font-size:1.4rem;font-weight:600;color:#f1f5f9;margin:32px 0 16px;">Common Use Cases</h3>
+      <ul style="list-style:none;padding:0;margin:0 0 32px;">
+        <li style="padding:8px 0;border-bottom:1px solid #1e293b;color:#cbd5e1;">✅ Encoding API credentials for HTTP Basic Authentication headers</li>
+        <li style="padding:8px 0;border-bottom:1px solid #1e293b;color:#cbd5e1;">✅ Creating Base64 data URIs for small images embedded in HTML/CSS</li>
+        <li style="padding:8px 0;border-bottom:1px solid #1e293b;color:#cbd5e1;">✅ Encoding binary attachments in email systems</li>
+        <li style="padding:8px 0;border-bottom:1px solid #1e293b;color:#cbd5e1;">✅ Decoding Base64-encoded API responses or JWT tokens</li>
+        <li style="padding:8px 0;border-bottom:1px solid #1e293b;color:#cbd5e1;">✅ Encoding configuration data stored as environment variables</li>
+        <li style="padding:8px 0;border-bottom:1px solid #1e293b;color:#cbd5e1;">✅ Transmitting binary data through text-only channels (JSON, XML)</li>
+      </ul>
+
+      <h3 style="font-size:1.4rem;font-weight:600;color:#f1f5f9;margin:32px 0 24px;">Frequently Asked Questions</h3>
+      <div style="margin-bottom:24px;">
+        <h4 style="font-size:1rem;font-weight:600;color:#f1f5f9;margin-bottom:8px;">What is Base64 encoding?</h4>
+        <p style="color:#cbd5e1;margin:0;">Base64 is an encoding scheme that converts binary data to a text format using 64 printable ASCII characters (A-Z, a-z, 0-9, +, /). It's designed to transmit binary data through systems that only handle text. The name 'Base64' comes from each character representing 6 bits (2^6 = 64), so 3 bytes of binary data encode to 4 Base64 characters.</p>
+      </div>
+      <div style="margin-bottom:24px;">
+        <h4 style="font-size:1rem;font-weight:600;color:#f1f5f9;margin-bottom:8px;">Why does Base64 output end with == or =?</h4>
+        <p style="color:#cbd5e1;margin:0;">Base64 works in 3-byte groups. If the input isn't divisible by 3, padding characters (=) fill the gap. One extra byte = 2 = padding characters; two extra bytes = 1 = character. No padding means the input length was exactly divisible by 3. The = signs are structural — not meaningful data.</p>
+      </div>
+      <div style="margin-bottom:24px;">
+        <h4 style="font-size:1rem;font-weight:600;color:#f1f5f9;margin-bottom:8px;">What is URL-safe Base64?</h4>
+        <p style="color:#cbd5e1;margin:0;">Standard Base64 uses + and / which have special meanings in URLs. URL-safe Base64 replaces + with - and / with _ making the encoded string safe for use in URLs without percent-encoding. JWT tokens use URL-safe Base64 (without padding =). Our tool offers both standard and URL-safe encoding modes.</p>
+      </div>
+      <div style="margin-bottom:24px;">
+        <h4 style="font-size:1rem;font-weight:600;color:#f1f5f9;margin-bottom:8px;">Why is Base64 used for HTTP Basic Authentication?</h4>
+        <p style="color:#cbd5e1;margin:0;">HTTP Basic Auth sends credentials as 'Authorization: Basic base64(username:password)'. Base64 encodes the colon-separated credentials into a safe ASCII string for the HTTP header. Important: this provides NO security — it's trivially decodable. Always use HTTPS when using Basic Auth so the encoded credentials aren't visible in transit.</p>
+      </div>
+      <div style="margin-bottom:24px;">
+        <h4 style="font-size:1rem;font-weight:600;color:#f1f5f9;margin-bottom:8px;">How much larger is Base64 output than the input?</h4>
+        <p style="color:#cbd5e1;margin:0;">Base64 encoding increases data size by approximately 33% (3 bytes of input become 4 bytes of output). A 1MB file becomes ~1.33MB when Base64-encoded. For very small data (images under 10KB), the size increase is often worth the convenience of avoiding separate HTTP requests. For larger files, use actual URLs instead of data URIs.</p>
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Base64 encoding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Base64 is an encoding scheme that converts binary data to a text format using 64 printable ASCII characters (A-Z, a-z, 0-9, +, /). It's designed to transmit binary data through systems that only handle text. The name 'Base64' comes from each character representing 6 bits (2^6 = 64), so 3 bytes of binary data encode to 4 Base64 characters."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does Base64 output end with == or =?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Base64 works in 3-byte groups. If the input isn't divisible by 3, padding characters (=) fill the gap. One extra byte = 2 = padding characters; two extra bytes = 1 = character. No padding means the input length was exactly divisible by 3. The = signs are structural — not meaningful data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is URL-safe Base64?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard Base64 uses + and / which have special meanings in URLs. URL-safe Base64 replaces + with - and / with _ making the encoded string safe for use in URLs without percent-encoding. JWT tokens use URL-safe Base64 (without padding =). Our tool offers both standard and URL-safe encoding modes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is Base64 used for HTTP Basic Authentication?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HTTP Basic Auth sends credentials as 'Authorization: Basic base64(username:password)'. Base64 encodes the colon-separated credentials into a safe ASCII string for the HTTP header. Important: this provides NO security — it's trivially decodable. Always use HTTPS when using Basic Auth so the encoded credentials aren't visible in transit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much larger is Base64 output than the input?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Base64 encoding increases data size by approximately 33% (3 bytes of input become 4 bytes of output). A 1MB file becomes ~1.33MB when Base64-encoded. For very small data (images under 10KB), the size increase is often worth the convenience of avoiding separate HTTP requests. For larger files, use actual URLs instead of data URIs."
+      }
+    }
+  ]
+}
+  </script>
+  </footer>
 </body>
 </html>
